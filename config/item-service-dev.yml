@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: item-service
+
+  cloud:
+    config:
+      override-none: true # 禁止覆盖本地配置
+
+server:
+  port: 8001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka  # 向该路径发送心跳、注册、拉取注册表....
+
